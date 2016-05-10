@@ -50,9 +50,9 @@
 ## 4. Enter project name and directory then finish the project creation.
 ## 5. Initialize the application.properties file (under {project}\src\main\resources)
 ```
-  spring.datasource.url = jdbc:mysql://<host_address>:3306/<database_name>
-  spring.datasource.username = <user>
-  spring.datasource.password = <password>
+  spring.datasource.url = jdbc:mysql://{host_address}:3306/{database_name}
+  spring.datasource.username = {username}
+  spring.datasource.password = {password}
   spring.datasource.driverClassName = com.mysql.jdbc.Driver
   # Specify the DBMS
   spring.jpa.database = MYSQL
