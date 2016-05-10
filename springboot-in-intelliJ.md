@@ -65,3 +65,53 @@
   # stripped before adding them to the entity manager)
   spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ```
+## 6. Create package com.stardust.easyassess.<project_name>.beans in java folder
+   
+   Add a entity class for test purpose, following example is a typical JPA ORM standard.
+```java
+@Entity
+@Table(name="Users")
+public class User {
+
+    private long id;
+
+    private String name;
+
+    @Id
+    @GeneratedValue
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+}
+```
+## 7. Create a controller package in java folder com.stardust.easyassess.<project_name>.controllers
+```java
+@RestController
+public class UserController {
+    @RequestMapping("/user")
+    public User home() {
+        User u = new User();
+        u.setId(1);
+        u.setName("Test");
+        return u;
+    }
+}
+```
+
+```
+visit http://localhost:8080/user to test it
+```
+
