@@ -12,8 +12,8 @@
    
    3) Use Maven as the project type
    
-   4) Enter artifact name with specific format easyassess-<project_name> (i.e easyassess-pdm) and enter package name as
-      com.stardust.easyassess.<project_name>. Use com.stardust.easyassess as the group id
+   4) Enter artifact name with specific format easyassess-{project_name} (i.e easyassess-pdm) and enter package name as
+      com.stardust.easyassess.{project_name}. Use com.stardust.easyassess as the group id
 ## 3. Select dependencies 
    NOTE: you can add dependencies manually after you created the project, but I recommend to choose all your needs in 
    
@@ -48,7 +48,7 @@
 ```
       
 ## 4. Enter project name and directory then finish the project creation.
-## 5. Initialize the application.properties file (under <project>\<src>\<main>\resources)
+## 5. Initialize the application.properties file (under {project}\src\main\resources)
 ```
   spring.datasource.url = jdbc:mysql://<host_address>:3306/<database_name>
   spring.datasource.username = <user>
@@ -65,7 +65,7 @@
   # stripped before adding them to the entity manager)
   spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 ```
-## 6. Create package com.stardust.easyassess.<project_name>.beans in java folder
+## 6. Create package com.stardust.easyassess.{project_name}.beans in java folder
    
    Add a entity class for test purpose, following example is a typical JPA ORM standard.
 ```java
@@ -97,7 +97,7 @@ public class User {
 
 }
 ```
-## 7. Create a controller package in java folder com.stardust.easyassess.<project_name>.controllers
+## 7. Create a controller package in java folder com.stardust.easyassess.{project_name}.controllers
 ```java
 @RestController
 public class UserController {
