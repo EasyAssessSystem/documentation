@@ -63,7 +63,7 @@ excute this to run the migration
 ```sh
 	flyway migrate
 ```
-PS.注意sql的文件名是**两个下划线**
+PS.注意sql的文件名是**两个下划线**,同时sql文件的命名已V1__xxxx.sql来命名，V表示版本，1代表版本号。
 
 
 ### Rollback
